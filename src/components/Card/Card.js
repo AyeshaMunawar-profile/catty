@@ -6,8 +6,8 @@ class Card extends Component {
         return (
             <>
                 <div>
-                    <img src='https://robohash.org/1491?set=set4' alt='profile picture of robot'/>
-                    <div>git
+                    <img src='https://robohash.org/1491?set=set4' alt='cat'/>
+                    <div>
                         <h2>
                             Mr Mittens
                         </h2>
