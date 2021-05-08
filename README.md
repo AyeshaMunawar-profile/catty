@@ -1,3 +1,13 @@
+#Catty - A simple react app
+This project is created ot practice the very basic concepts of react i.e.
+1) React components 
+2) Class Components vs Functional Components 
+3) Use of Third party libraries like Tachyons 
+   
+    link: https://tachyons.io/
+4) Use of states for managing a communication between the parent components and child components
+5) Basic event handling i.e change the search field and search result on changing the input value 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
