@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Card from "./components/Card/Card";
 import "tachyons";
+import CardList from "./components/CardList/CardList";
 
 ReactDOM.render(
-    <Card robotName={"Tachyons: BTX345"}/>,
+    <CardList/>,
     document.getElementById('root')
 );
 
