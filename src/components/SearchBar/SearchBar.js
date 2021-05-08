@@ -1,12 +1,17 @@
 import React, {Component} from "react";
 import './SearchBar.css';
 
-class SearchBar extends Component{
-
+class SearchBar extends Component {
     render() {
-        return(
+        const searchChange = this.props.searchChange;
+        return (
             <>
-                <h1>Serach bar</h1>
+                <div className="pa2 tc mb6">
+                    <input type="search"
+                           placeholder="find a cat ..."
+                           className="search-bar pa4 ba b--yellow bg-lightest-blue w-50"
+                           onChange={searchChange}/>
+                </div>
             </>
         )
     }

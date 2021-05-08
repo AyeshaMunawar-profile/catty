@@ -1,0 +1,7 @@
+.search-bar:placeholder-shown{
+    font-size: 2.25rem;
+}
+.search-bar[type="search"]{
+    line-height: normal;
+    font-size: 2.25rem;
+}
