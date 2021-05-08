@@ -4,9 +4,10 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import "tachyons";
 import CardList from "./components/CardList/CardList";
+import {cats} from "./common/catslist"
 
 ReactDOM.render(
-    <CardList/>,
+    <CardList cats={cats}/>,
     document.getElementById('root')
 );
 

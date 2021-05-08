@@ -1,4 +1,4 @@
-export const Cats = [
+export const cats = [
     {
         id: 1,
         name: 'Leanne Graham',
