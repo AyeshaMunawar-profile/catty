@@ -10,3 +10,25 @@
     font-style: normal;
     font-weight: bold;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    height: 3rem;
+    border-radius: 10px;
+    background-color:#fc466b
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #cd3754;
+}

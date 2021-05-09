@@ -4,6 +4,7 @@ import CardList from "./components/CardList/CardList";
 import Header from "./components/Header/Header";
 import {cats} from "./common/js/catslist"
 import SearchBar from "./components/SearchBar/SearchBar";
+import Scroll from "./components/common/Scroll/Scroll";
 
 class App extends Component {
     constructor(props) {
@@ -23,15 +24,21 @@ class App extends Component {
         const filteredCats = this.state.cats.filter(cat => {
             return cat.name.toLowerCase().includes(this.state.searchField.toLowerCase())
         });
-        return (
-            <>
-                <div className="app">
-                <Header/>
-                <SearchBar searchChange={this.onSearchChange}/>
-                <CardList cats={filteredCats}/>
-                </div>
-            </>
-        );
+        if (filteredCats.length === 0) {
+            return <h1>Loading ...</h1>
+        } else {
+            return (
+                <>
+                    <div className="app">
+                        <Header/>
+                        <SearchBar searchChange={this.onSearchChange}/>
+                        <Scroll>
+                            <CardList cats={filteredCats}/>
+                        </Scroll>
+                    </div>
+                </>
+            );
+        }
     }
 }
 
