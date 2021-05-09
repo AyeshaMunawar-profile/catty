@@ -1,7 +1,7 @@
 # [Project Demo](https://ayeshamunawar-profile.github.io/catty/)
 # Catty - A simple react app
 
-This project is created ot practice the very basic concepts of react i.e.
+This project is created to practice the very basic concepts of react i.e.
 
 1) Create React components 
 2) Class Components vs Functional Components 
