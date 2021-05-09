@@ -1,4 +1,5 @@
-#Catty - A simple react app
+# Catty - A simple react app
+
 This project is created ot practice the very basic concepts of react i.e.
 1) React components 
 2) Class Components vs Functional Components 

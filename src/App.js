@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import './App.css';
 import CardList from "./components/CardList/CardList";
 import Header from "./components/Header/Header";
-import {cats} from "./common/catslist"
+import {cats} from "./common/js/catslist"
 import SearchBar from "./components/SearchBar/SearchBar";
 
 class App extends Component {
@@ -16,19 +16,20 @@ class App extends Component {
     }
 
     onSearchChange = (event) => {
-        this.state.searchField = event.target.value;
-        const filteredCats= this.state.cats.filter(cat=>{
-            return cat.name.toLowerCase().includes(this.state.searchField.toLowerCase())
-        });
-        console.log(event.target.value, filteredCats);
+        this.setState({searchField: event.target.value});
     }
 
     render() {
+        const filteredCats = this.state.cats.filter(cat => {
+            return cat.name.toLowerCase().includes(this.state.searchField.toLowerCase())
+        });
         return (
             <>
+                <div className="app">
                 <Header/>
                 <SearchBar searchChange={this.onSearchChange}/>
-                <CardList cats={this.state.cats}/>
+                <CardList cats={filteredCats}/>
+                </div>
             </>
         );
     }
