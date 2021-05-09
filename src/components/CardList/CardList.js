@@ -7,7 +7,7 @@ class CardList extends Component {
         const cats = this.props.cats;
         return (
             <>
-                <div className="card-list tc pa4">
+                <div className="card-list tc pa4 pt0">
                     {
                         cats.map((cat, index) => {
                             return (
