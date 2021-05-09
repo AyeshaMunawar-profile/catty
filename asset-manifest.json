@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/catty/static/css/main.11e103de.chunk.css",
+    "main.js": "/catty/static/js/main.69795ff9.chunk.js",
+    "main.js.map": "/catty/static/js/main.69795ff9.chunk.js.map",
+    "runtime-main.js": "/catty/static/js/runtime-main.6dd7377b.js",
+    "runtime-main.js.map": "/catty/static/js/runtime-main.6dd7377b.js.map",
+    "static/css/2.c1f4f5f4.chunk.css": "/catty/static/css/2.c1f4f5f4.chunk.css",
+    "static/js/2.e41c0cee.chunk.js": "/catty/static/js/2.e41c0cee.chunk.js",
+    "static/js/2.e41c0cee.chunk.js.map": "/catty/static/js/2.e41c0cee.chunk.js.map",
+    "static/js/3.50534bbd.chunk.js": "/catty/static/js/3.50534bbd.chunk.js",
+    "static/js/3.50534bbd.chunk.js.map": "/catty/static/js/3.50534bbd.chunk.js.map",
+    "index.html": "/catty/index.html",
+    "static/css/2.c1f4f5f4.chunk.css.map": "/catty/static/css/2.c1f4f5f4.chunk.css.map",
+    "static/css/main.11e103de.chunk.css.map": "/catty/static/css/main.11e103de.chunk.css.map",
+    "static/js/2.e41c0cee.chunk.js.LICENSE.txt": "/catty/static/js/2.e41c0cee.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/catty/static/media/Crazy Cartoon.095c8bce.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6dd7377b.js",
+    "static/css/2.c1f4f5f4.chunk.css",
+    "static/js/2.e41c0cee.chunk.js",
+    "static/css/main.11e103de.chunk.css",
+    "static/js/main.69795ff9.chunk.js"
+  ]
+}
