@@ -8,7 +8,7 @@ class CardList extends Component {
         return (
             <>
                 <div className="card-list tc pa2 pt0 mt5 mb5">
-                    {
+                    {cats.length ?
                         cats.map((cat, index) => {
                             return (
                                 <Card
@@ -18,7 +18,7 @@ class CardList extends Component {
                                     id={cats[index].id}
                                     key={index}/>
                             )
-                        })
+                        }) : <h1 className="white f1 mt6 grow">Loading ...</h1>
                     }
                 </div>
             </>

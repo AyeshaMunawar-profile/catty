@@ -9,7 +9,7 @@ const Scroll = (props) => {
             paddingTop: '5rem',
             paddingBottom: '5rem',
             height: '50rem',
-            borderRadius: '15px'
+            borderRadius: '20px'
         }}>
             {props.children}
         </div>
