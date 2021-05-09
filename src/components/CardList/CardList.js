@@ -4,6 +4,7 @@ import Card from "../Card/Card";
 
 class CardList extends Component {
     render() {
+        // in case if you need error handling use throw new Error("message")
         const cats = this.props.cats;
         return (
             <>
