@@ -6,7 +6,7 @@ class Header extends Component {
         return (
             <>
                 <div className="header tc pt3 pb3">
-                    <h1 className='f-headline lh-title f-cartoon white'>Catty</h1>
+                    <h1 className='f-headline lh-title f-cartoon white'>{this.props.headingText}</h1>
                 </div>
             </>
         );

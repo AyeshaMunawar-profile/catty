@@ -2,7 +2,7 @@
     font-family: 'Crazy Cartoon Regular';
     font-style: normal;
     font-weight: normal;
-    src: local('Crazy Cartoon Regular'), url('common/fonts/Crazy Cartoon.woff') format('woff');
+    src: local('Crazy Cartoon Regular'), url('../../common/fonts/Crazy Cartoon.woff') format('woff');
 }
 
 .f-cartoon {
