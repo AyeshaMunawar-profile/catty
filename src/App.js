@@ -10,10 +10,18 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            cats: cats,
+            cats: [],
             searchField: ''
         }
 
+    }
+
+    componentDidMount() {
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then(response => response.json())
+            .then(users => {
+                this.setState({cats: users})
+            });
     }
 
     onSearchChange = (event) => {
@@ -24,21 +32,17 @@ class App extends Component {
         const filteredCats = this.state.cats.filter(cat => {
             return cat.name.toLowerCase().includes(this.state.searchField.toLowerCase())
         });
-        if (filteredCats.length === 0) {
-            return <h1>Loading ...</h1>
-        } else {
-            return (
-                <>
-                    <div className="app">
-                        <Header/>
-                        <SearchBar searchChange={this.onSearchChange}/>
-                        <Scroll>
-                            <CardList cats={filteredCats}/>
-                        </Scroll>
-                    </div>
-                </>
-            );
-        }
+        return (
+            <>
+                <div className="app">
+                    <Header/>
+                    <SearchBar searchChange={this.onSearchChange}/>
+                    <Scroll>
+                        <CardList cats={filteredCats}/>
+                    </Scroll>
+                </div>
+            </>
+        );
     }
 }
 
