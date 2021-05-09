@@ -8,7 +8,7 @@ class SearchBar extends Component {
             <>
                 <div className="pa2 tc mb6">
                     <input type="search"
-                           placeholder="find a cat ..."
+                           placeholder="find a cat by name ..."
                            className="search-bar pa4 ba b--yellow bg-lightest-blue w-50"
                            onChange={searchChange}/>
                 </div>

@@ -1,0 +1,6 @@
+@font-face {
+    font-family: 'Crazy Cartoon Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Crazy Cartoon Regular'), url('../fonts/Crazy Cartoon.woff') format('woff');
+}
