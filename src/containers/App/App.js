@@ -4,6 +4,7 @@ import CardList from "../../components/CardList/CardList";
 import Header from "../../components/Header/Header";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import Scroll from "../../components/common/Scroll/Scroll";
+import ErrorBoundary from "../../components/common/Error Boundary/ErrorBoundary";
 
 class App extends Component {
 
@@ -28,7 +29,7 @@ class App extends Component {
     }
 
     render() {
-        const {cats,searchField}= this.state;
+        const {cats, searchField} = this.state;
         const filteredCats = cats.filter(cat => {
             return cat.name.toLowerCase().includes(searchField.toLowerCase())
         });
@@ -38,7 +39,9 @@ class App extends Component {
                     <Header headingText="Catty"/>
                     <SearchBar searchChange={this.onSearchChange}/>
                     <Scroll>
-                        <CardList cats={filteredCats}/>
+                        <ErrorBoundary>
+                            <CardList cats={filteredCats}/>
+                        </ErrorBoundary>
                     </Scroll>
                 </div>
             </>

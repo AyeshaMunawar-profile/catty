@@ -4,14 +4,16 @@ This project is created ot practice the very basic concepts of react i.e.
 
 1) Create React components 
 2) Class Components vs Functional Components 
-3) Use of Third party libraries like Tachyons
+3) Use of Third party libraries like `Tachyons`
 
-   ###### link: https://tachyons.io/
+   ###### [Tachyons.io](https://tachyons.io/)
    
-4) Use of states for managing a communication between the parent components and child components
+4) Use of `States` for managing a communication between the parent components and child components
 5) Basic event handling i.e change the search field and search result on changing the input value
 6) Use props for passing a value to the children components using `this.props`
 7) Use children to make a wrapper component render its children using `props.childrens` e.g. in Scroll component
+8) Use Error Boundary for error handling i.e. don't let the app break
+9) Used some React lifecycle methods like `componentDidCatch` and `componentDidMount`
 
 # Getting Started with Create React App
 
