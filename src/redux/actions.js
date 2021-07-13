@@ -1,6 +1,10 @@
-import { CHANGE_SEARCH_FIELD } from "../constants";
+import {CHANGE_SEARCH_FIELD} from "../common/constants/constants";
 
-export const setSearchField = (text) => ({
-	type: CHANGE_SEARCH_FIELD,
-	payload: text
-})
+export const setSearchField = (text) => {
+    console.log("Text received in action is :", text);
+
+    return {
+        type: CHANGE_SEARCH_FIELD,
+        payload: text
+    }
+}

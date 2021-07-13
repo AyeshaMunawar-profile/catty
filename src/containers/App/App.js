@@ -17,7 +17,7 @@ const mapDispatchToProps = (dispatch) => {
 }
 const mapStateToProps = (state) => {
     return {
-        searchField: state.searchCatsReducer.searchField
+        searchField: state.searchField
     }
 }
 const App = (props) => {
