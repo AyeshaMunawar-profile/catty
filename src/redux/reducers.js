@@ -11,7 +11,6 @@ const initialState = {
 
 
 export const searchCatsReducer = (state = initialState, action = {}) => {
-	console.log("Action Recieved in reducer is :", action);
 	switch (action.type) {
 		case CHANGE_SEARCH_FIELD:
 			return Object.assign({}, state, { searchField: action.payload })
