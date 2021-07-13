@@ -1,16 +1,29 @@
 import React, { useEffect, useState } from "react";
+import { connect } from "react-redux";
 import './App.css';
 import CardList from "../../components/CardList/CardList";
 import Header from "../../components/Header/Header";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import Scroll from "../../components/common/Scroll/Scroll";
 import ErrorBoundary from "../../components/common/Error Boundary/ErrorBoundary";
+import { setSearchField } from "../../redux/actions";
 
-const App = () => {
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onSearchChange: (event) => {
+            dispatch(setSearchField(event.target.value))
+        }
+    }
+}
+const mapStateToProps = (state) => {
+    return {
+        searchField: state.searchField
+    }
+}
+const App = (props) => {
 
     const [cats, setCats] = useState([]);
-    const [searchField, setSearchField] = useState("");
-
+    const { searchField, onSearchChange } = props;
     // use effect adds the ability to perform sideeffects from a function component . It has the same effect as componentDidMount componentWillMount , componentDidUpdate
 
     // called when ever the page renders 
@@ -24,10 +37,6 @@ const App = () => {
                 setCats(cats);
             });
     }, []);
-
-    const onSearchChange = (event) => {
-        setSearchField(event.target.value);
-    }
 
     const filteredCats = cats.filter(cat => {
         return cat.name.toLowerCase().includes(searchField.toLowerCase())
@@ -49,4 +58,4 @@ const App = () => {
 
 }
 
-export default App;
+export default connect(mapStateToProps, mapDispatchToProps)(App);
