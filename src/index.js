@@ -3,10 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './containers/App/App'
 import reportWebVitals from './reportWebVitals';
+import { Provider } from "react-redux";
+import { createStore } from 'redux';
 import "tachyons";
+import { searchCatsReducer } from './redux/reducers';
 
+const store = createStore(searchCatsReducer);
 ReactDOM.render(
-    <App />,
+    <Provider store={store}>
+        <App />
+    </Provider>,
     document.getElementById('root')
 );
 
