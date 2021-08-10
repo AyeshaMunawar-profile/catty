@@ -5,11 +5,11 @@ import Card from "../Card/Card";
 class CardList extends Component {
     render() {
         // in case if you need error handling use throw new Error("message")
-        const cats = this.props.cats;
+        const {cats, isPending, error} = this.props;
         return (
             <>
                 <div className="card-list tc pa2 pt0 mt5-ls mb5-ls mt3-m mb3-m mt3 mb3">
-                    {cats.length ?
+                    {cats.length && !isPending && !error ?
                         cats.map((cat, index) => {
                             return (
                                 <Card
@@ -19,7 +19,11 @@ class CardList extends Component {
                                     id={cats[index].id}
                                     key={index}/>
                             )
-                        }) : <h1 className="white f1 mt6 grow">Loading ...</h1>
+                        }) : isPending ? <h1 className="white f1 mt6 grow">Loading ...</h1> :
+                            error ?
+                                <h1 className="white f1 mt6 grow">Ooops! Something went wrong <br/> Try refreshing the
+                                    page</h1> :
+                                <h1 className="white f1 mt6 grow">No Cats Found !</h1>
                     }
                 </div>
             </>
