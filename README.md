@@ -15,7 +15,9 @@ This project is created to practice the very basic concepts of react i.e.
 7) Use children to make a wrapper component render its children using `props.childrens` e.g. in Scroll component
 8) Use Error Boundary for error handling i.e. don't let the app break
 9) Used some React lifecycle methods like `componentDidCatch` and `componentDidMount`
-10) Add redux to the project for better state management 
+10) Add redux to the project for better state management
+11) Use redux logger to console log redux state snapshot at a point 
+12) Use redux thunk as a middle ware to handle the asynchronous actions (side effects: ajax calls) it provides get state and dispatch functions . redux Thunk is a middleware that waits until an action returns a function instead of an object . 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
