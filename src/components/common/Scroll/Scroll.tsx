@@ -1,7 +1,7 @@
 import React from "react";
 import './Scroll.css';
 
-const Scroll = (props) => {
+const Scroll = (props: any) => {
     return (
         <div className="scrollable ma3-m ma5-l ma2-ns"
             style={{

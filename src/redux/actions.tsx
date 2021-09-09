@@ -5,7 +5,7 @@ import {
     REQUEST_CATS_PENDING
 } from "../common/constants/constants";
 
-export const setSearchField = (text) => {
+export const setSearchField = (text: string) => {
 
     return {
         type: CHANGE_SEARCH_FIELD,
@@ -14,7 +14,7 @@ export const setSearchField = (text) => {
 }
 //action for an asynchronous call
 // middle ware redux thunk notices an action that returns a function not an object and acts upon it
-export const requestCats = () => (dispatch) => {
+export const requestCats = () => (dispatch: any) => {
     dispatch({type: REQUEST_CATS_PENDING});
     // asynchronous call
     fetch('https://jsonplaceholder.typicode.com/users')

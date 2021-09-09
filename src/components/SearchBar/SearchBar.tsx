@@ -1,7 +1,9 @@
 import React, {Component} from "react";
 import './SearchBar.css';
-
-class SearchBar extends Component {
+type searchBarProps = {
+    searchChange: any
+}
+class SearchBar extends Component <searchBarProps>{
     render() {
         const searchChange = this.props.searchChange;
         return (
