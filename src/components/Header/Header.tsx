@@ -1,7 +1,10 @@
+import { type } from "os";
 import React, {Component} from "react";
 import './Header.css'
-
-class Header extends Component {
+type headerProps = {
+   headingText: string 
+}
+class Header extends Component <headerProps>{
     render() {
         return (
             <>

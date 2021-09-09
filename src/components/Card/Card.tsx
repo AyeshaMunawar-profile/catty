@@ -1,9 +1,17 @@
+import { prototype } from "events";
 import React, {Component} from "react";
 import "./Card.css"
 
-class Card extends Component {
+type cardPropsType = {
+    name: string|undefined,
+    email: string|undefined,
+    id: number|undefined,
+    username: string | undefined,
+    key: number|undefined
+}
+class Card extends Component<cardPropsType> {
     render() {
-        const {id, name, username, email} = this.props;
+        const {id, name, username, email} = this.props
         return (
             <>
                 <div

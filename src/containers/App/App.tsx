@@ -7,18 +7,19 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 import Scroll from "../../components/common/Scroll/Scroll";
 import ErrorBoundary from "../../components/common/Error Boundary/ErrorBoundary";
 import {requestCats, setSearchField} from "../../redux/actions";
+import { AppDispatch, RootState } from '../../redux/store';
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch : AppDispatch) => {
     return {
-        onSearchChange: (event) => {
+        onSearchChange: (event: any) => {
             dispatch(setSearchField(event.target.value))
         },
         onRequestCats: () => {
-            dispatch(requestCats())
+            dispatch<any>(requestCats())
         }
     }
 }
-const mapStateToProps = (state) => {
+const mapStateToProps = (state : RootState) => {
     console.log("State received in the component is ", state);
     return {
         searchField: state.searchCatsReducer.searchField,
@@ -27,7 +28,7 @@ const mapStateToProps = (state) => {
         error: state.requestCatsReducer.error
     }
 }
-const App = (props) => {
+const App = (props: any) => {
     console.log("Props are:", props);
     const {cats, searchField, onSearchChange, isPending, error} = props;
     // use effect adds the ability to perform sideeffects from a function component . It has the same effect as componentDidMount componentWillMount , componentDidUpdate
@@ -40,7 +41,7 @@ const App = (props) => {
         props.onRequestCats();
     }, []);
 
-    const filteredCats = cats.filter(cat => {
+    const filteredCats = cats.filter((cat: any) => {
         return cat.name.toLowerCase().includes(searchField.toLowerCase())
     });
 

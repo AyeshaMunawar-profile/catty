@@ -9,10 +9,8 @@ import {createStore, applyMiddleware, combineReducers} from 'redux';
 import {createLogger} from "redux-logger";
 import thunkMiddleware from "redux-thunk";
 import {searchCatsReducer, requestCatsReducer} from './redux/reducers';
+import store from './redux/store';
 
-const logger = createLogger();
-const rootReducer = combineReducers({searchCatsReducer, requestCatsReducer});
-const store = createStore(rootReducer, applyMiddleware(thunkMiddleware, logger));
 ReactDOM.render(
     <Provider store={store}>
         <App/>

@@ -13,7 +13,7 @@ const getStore = () => {
 	const store = createStore(rootReducer, applyMiddleware(thunkMiddleware, logger));
 	return store;
 }
-const getComponentWithStore = (component, store) => {
+const getComponentWithStore = (component : JSX.Element, store: {}) => {
 	return <Provider store={getStore()}>{component}</Provider>
 }
 describe("Test main suite 1: Main App component is working correctly", () => {
