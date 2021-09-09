@@ -13,11 +13,14 @@ const getStore = () => {
 	const store = createStore(rootReducer, applyMiddleware(thunkMiddleware, logger));
 	return store;
 }
+const getComponentWithStore = (component, store) => {
+	return <Provider store={getStore()}>{component}</Provider>
+}
 describe("Test main suite 1: Main App component is working correctly", () => {
 	describe("Test sub suite 1.1: Static text is displayed correctly", () => {
 		test("Test case 1.1.1: Header text is displayed correctly", () => {
 			// Step1: Arrange
-			render(<Provider store={getStore()}><App /></Provider>)
+			render(getComponentWithStore(<App />, getStore()));
 			// Step2: Act
 			// Stepp3: Assert
 			const textElement = screen.getByText("Catty", { exact: false });
